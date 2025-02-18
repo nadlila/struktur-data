@@ -21,7 +21,7 @@ public class UAS1_1 { [agar bisa diakses dari mana saja]
             choice = input.nextInt(); [menyimpan pilihan]
             input.nextLine(); [membaca seluruh baris]
             switch (choice) { [melakukan pemilihan yang sesuai]
-                case 1: [salah satu pemilihan]
+                case 1: 
                 if (prestasiCount >= 100) {  [memastikan prestasi tidak lebih dari 100]
                     System.out.println("Jumlah prestasi telah mencapai batas maksimal."); [menampilkan]
                     break; [menghentikan eksekusi dalam switch]
@@ -59,33 +59,33 @@ public class UAS1_1 { [agar bisa diakses dari mana saja]
                     prestasiCount++; [menghitung jumlah yang sudah ditambahkan]
                     System.out.println("Prestasi berhasil ditambahkan!"); [menampilkan jumlahnya]
                     break; [menghentikan eksekusi]
-                case 2: [salah satu pemilihan]
+                case 2: 
                 if (prestasiCount > 0) { [memastikan prestasi lebih dari 0]
                     System.out.println("=== DAFTAR SEMUA PRESTASI ==="); [menampilkan menu]
                     for (int i = 0; i < prestasiCount; i++) { [perulangan untuk mengeksekusi berdasarkan kondisi tertentu]
-                        System.out.println("Nama: " + namaMahasiswa[i] + "| NIM: " + nimMahasiswa[i] + "| Jenis: " + jenisPrestasi[i] + "| Tingkat: " + tingkatPrestasi[i] + "| Tahun: " + tahunPrestasi[i]); [menampilkan yang sudah dipilih tadi]
+                        System.out.println("Nama: " + namaMahasiswa[i] + "| NIM: " + nimMahasiswa[i] + "| Jenis: " + jenisPrestasi[i] + "| Tingkat: " + tingkatPrestasi[i] + "| Tahun: " + tahunPrestasi[i]); [menampilkan pilihan yang sudah dipilih]
                     }
                 } else { [jika kondisi tidak terpenuhi]
                     System.out.println("belum ada data prestasi"); [menampilkan]
                 }                  
-                    break;
-                case 3:
-                System.out.print("Masukkan jenis prestasi yang ingin dianalisis: "); 
-                String jenis = input.nextLine(); 
-                System.out.println("=== ANALSIS PRESTASI ==="); 
-                for (int i = 0; i < prestasiCount; i++) { 
-                    if (jenisPrestasi[i].equalsIgnoreCase(jenis)) { 
-                        System.out.println("Nama: " + namaMahasiswa[i] + "| NIM: " + nimMahasiswa[i] + "| Tingkat: " + tingkatPrestasi[i] + "| Tahun: " + tahunPrestasi[i]); 
+                    break; [menghentikan eksekusi]
+                case 3: 
+                System.out.print("Masukkan jenis prestasi yang ingin dianalisis: "); [menampilkan menu]
+                String jenis = input.nextLine(); [memasukkan jenis yang dipilih]
+                System.out.println("=== ANALSIS PRESTASI ==="); [menampilkan menu]
+                for (int i = 0; i < prestasiCount; i++) { [perulangan untuk mengeksekusi berdasarkan kondisi tertentu]
+                    if (jenisPrestasi[i].equalsIgnoreCase(jenis)) { [pemilihan tanpa memperhatikan huruf kapital]
+                        System.out.println("Nama: " + namaMahasiswa[i] + "| NIM: " + nimMahasiswa[i] + "| Tingkat: " + tingkatPrestasi[i] + "| Tahun: " + tahunPrestasi[i]); [menampilkan pilihan yang sudah dipilih]
                     } 
                 }
-                    break;
+                    break; [menghentikan eksekusi]
                 case 4: 
-                    System.out.println("Terima kasih!"); 
-                    break;
-                default:
-                    System.out.println("Pilihan tidak valid. Silakan coba lagi.");
+                    System.out.println("Terima kasih!"); [menampilkan baris terakhir]
+                    break; [menghentikan eksekusi]
+                default: [jika kondisi tidak ada yang cocok]
+                    System.out.println("Pilihan tidak valid. Silakan coba lagi."); [maka menampilkan baris ini]
             }
-        } while (choice != 4); 
+        } while (choice != 4); [jika user memasukkan angka 4, loop akan berhenti]
     }
 }
            
