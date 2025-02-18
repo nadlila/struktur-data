@@ -27,45 +27,45 @@ public class UAS1_1 { [agar bisa diakses dari mana saja]
                     break; [menghentikan eksekusi dalam switch]
                     } 
 
-                    System.out.print("Nama Mahasiswa: "); [menampilkan]
-                    namaMahasiswa[prestasiCount] = input.nextLine(); [menampilkan seluruh baris] 
-                    System.out.print("NIM: "); [menampilkan]
-                    nimMahasiswa[prestasiCount] = input.nextLine(); [menampilkan seluruh baris]
-                    System.out.print("Jenis Prestasi: "); [menampilkan]
-                    jenisPrestasi[prestasiCount] = input.nextLine(); [menampilkan seluruh baris] 
+                    System.out.print("Nama Mahasiswa: "); [menampilkan pertanyaan]
+                    namaMahasiswa[prestasiCount] = input.nextLine(); [menampilkan baris yang sudah dijawab] 
+                    System.out.print("NIM: "); [menampilkan pertanyaan]
+                    nimMahasiswa[prestasiCount] = input.nextLine(); [menampilkan baris yang sudah dijawab]
+                    System.out.print("Jenis Prestasi: "); [menampilkan pertanyaan]
+                    jenisPrestasi[prestasiCount] = input.nextLine(); [menampilkan baris yang sudah dijawab] 
                     while (true) { [memastikan loop terus berjalan sampai user memilih opsi yang valid]
-                        System.out.print("Tingkat Prestasi (Lokal, Nasional, Internasional): "); 
-                        tingkatPrestasi[prestasiCount] = input.nextLine(); 
-                        if (tingkatPrestasi[prestasiCount].equalsIgnoreCase("Lokal") || 
-                        tingkatPrestasi[prestasiCount].equalsIgnoreCase("Nasional") || 
-                        tingkatPrestasi[prestasiCount].equalsIgnoreCase("Internasional")) {
-                            break; 
-                        } else { 
-                            System.out.println("Input tidak valid. Harap masukkan salah satu dari: Lokal, Nasional, Internasional."); 
+                        System.out.print("Tingkat Prestasi (Lokal, Nasional, Internasional): "); [menampilkan pilihan] 
+                        tingkatPrestasi[prestasiCount] = input.nextLine(); [menampilkan baris yang sudah dipilih]
+                        if (tingkatPrestasi[prestasiCount].equalsIgnoreCase("Lokal") || [pemilihan if tanpa memedulikan perbedaan kapital dan spasi]
+                        tingkatPrestasi[prestasiCount].equalsIgnoreCase("Nasional") || [pemilihan]
+                        tingkatPrestasi[prestasiCount].equalsIgnoreCase("Internasional")) { [pemilihan]
+                            break; [menghentikan eksekusi] 
+                        } else { [jika kondisi tidak terpenuhi, ]
+                            System.out.println("Input tidak valid. Harap masukkan salah satu dari: Lokal, Nasional, Internasional."); [maka muncul kalimat tersebut]
                         } 
                     }
-                    while (true) { 
-                        System.out.print("Tahun Prestasi (2010 hingga tahun saat ini): "); 
-                        int tahun = input.nextInt(); 
-                        input.nextLine(); 
-                        if (tahun >= 2010 && tahun <= 2024) { 
-                            tahunPrestasi[prestasiCount] = tahun; 
-                            break; 
-                        } else { 
-                            System.out.println("Input tidak valid. Harap masukkan tahun antara 2010 hingga tahun saat ini."); 
+                    while (true) { [memastikan loop terus berjalan sampai user memilih opsi yang valid]
+                        System.out.print("Tahun Prestasi (2010 hingga tahun saat ini): ");  [menampilkan pilihan]
+                        int tahun = input.nextInt(); [menyimpan bilangan bulat]
+                        input.nextLine(); [membaca seluruh baris]
+                        if (tahun >= 2010 && tahun <= 2024) { [pemilihan dengan if]
+                            tahunPrestasi[prestasiCount] = tahun; [menampilkan jawaban]
+                            break; [menghentikan eksekusi]
+                        } else { [jika kondisi tidak terpenuhi]
+                            System.out.println("Input tidak valid. Harap masukkan tahun antara 2010 hingga tahun saat ini."); [maka muncul kalimat tersebut]
                         } 
                     }
 
-                    prestasiCount++; 
-                    System.out.println("Prestasi berhasil ditambahkan!");
-                    break;
-                case 2:
-                if (prestasiCount > 0) {
-                    System.out.println("=== DAFTAR SEMUA PRESTASI ==="); 
-                    for (int i = 0; i < prestasiCount; i++) { 
-                        System.out.println("Nama: " + namaMahasiswa[i] + "| NIM: " + nimMahasiswa[i] + "| Jenis: " + jenisPrestasi[i] + "| Tingkat: " + tingkatPrestasi[i] + "| Tahun: " + tahunPrestasi[i]); 
+                    prestasiCount++; [menghitung jumlah yang sudah ditambahkan]
+                    System.out.println("Prestasi berhasil ditambahkan!"); [menampilkan jumlahnya]
+                    break; [menghentikan eksekusi]
+                case 2: [salah satu pemilihan]
+                if (prestasiCount > 0) { [memastikan prestasi lebih dari 0]
+                    System.out.println("=== DAFTAR SEMUA PRESTASI ==="); [menampilkan menu]
+                    for (int i = 0; i < prestasiCount; i++) { [perulangan untuk mengeksekusi berdasarkan kondisi tertentu]
+                        System.out.println("Nama: " + namaMahasiswa[i] + "| NIM: " + nimMahasiswa[i] + "| Jenis: " + jenisPrestasi[i] + "| Tingkat: " + tingkatPrestasi[i] + "| Tahun: " + tahunPrestasi[i]); [menampilkan yang sudah dipilih tadi]
                     }
-                } else {
+                } else { [jika kondisi tidak terpenuhi]
                     System.out.println("belum ada data prestasi");
                 }                  
                     break;
