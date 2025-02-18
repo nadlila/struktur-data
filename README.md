@@ -66,7 +66,7 @@ public class UAS1_1 { [agar bisa diakses dari mana saja]
                         System.out.println("Nama: " + namaMahasiswa[i] + "| NIM: " + nimMahasiswa[i] + "| Jenis: " + jenisPrestasi[i] + "| Tingkat: " + tingkatPrestasi[i] + "| Tahun: " + tahunPrestasi[i]); [menampilkan yang sudah dipilih tadi]
                     }
                 } else { [jika kondisi tidak terpenuhi]
-                    System.out.println("belum ada data prestasi");
+                    System.out.println("belum ada data prestasi"); [menampilkan]
                 }                  
                     break;
                 case 3:
