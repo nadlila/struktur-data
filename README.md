@@ -85,7 +85,7 @@ public class UAS1_1 { [agar bisa diakses dari mana saja]
                 default:
                     System.out.println("Pilihan tidak valid. Silakan coba lagi.");
             }
-        } while (choice != 4);
+        } while (choice != 4); 
     }
 }
            
