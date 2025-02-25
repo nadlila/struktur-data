@@ -1,4 +1,4 @@
-public class sistem_nilai_manajemen {
+public class sistem_nilai_manajemen { 
     public static void main(String[] args) {
         // Data siswa
         String[] namaSiswa = {"Ani", "Budi", "Cici", "Dodi", "Edi"};
