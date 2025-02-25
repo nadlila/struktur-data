@@ -1,5 +1,7 @@
 public class permainan_tictactoe { [mendeklarasikan kelas]
+
     public static void main(String[] args) { [mendeklarasikan metode main untuk mengeksekusi program]
+    
         char[][] papan = new char[3][3]; [membuat array 2 dimensi berukuran 3*3, berisi karakter]
 
         // Inisialisasi papan kosong

@@ -1,5 +1,7 @@
 public class sistem_nilai_manajemen { [mendeklarasikan metode main untuk mengeksekusi program]
+
     public static void main(String[] args) { [untuk java bisa mengeksekusi saat program dijalankan]
+    
         // Data siswa
         String[] namaSiswa = {"Ani", "Budi", "Cici", "Dodi", "Edi"}; [menyimpan teks berupa nama]
         int[][] nilai = { [menyimpan bilangan bulat]
