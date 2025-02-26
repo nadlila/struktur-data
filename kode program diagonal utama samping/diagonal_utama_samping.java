@@ -2,9 +2,9 @@ public class diagonal_utama_samping {
 
     public static void main(String[] args) {
         int[][] matriks = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
+            {4, 2, 6},
+            {7, 5, 3},
+            {10, 8, 9}
         };
 
         System.out.println("diagonal utama matriks: ");
